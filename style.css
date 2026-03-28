@@ -1,0 +1,41 @@
+html { scroll-behavior: smooth; }
+
+.page-section { display: none; }
+
+.page-section.active { display: block; animation: fadeIn 0.4s ease-out forwards; }
+
+/* Custom Scrollbar for a premium feel */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #fafaf9; }
+::-webkit-scrollbar-thumb { background: #064e3b; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #f59e0b; }
+
+/* Hero Background Slider */
+.hero-slider {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    mix-blend-mode: overlay;
+}
+
+/* Show the active slide */
+.hero-slide.active {
+    opacity: 0.4; /* Matches your original design's opacity */
+}
+
+/* Gradient Overlay to keep text readable */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, #022c22 0%, rgba(2, 44, 34, 0.8) 50%, transparent 100%);
+    z-index: 1;
+}
