@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avi Realty | Premium Land Investment in Pune</title>
+    <title>Sanskar Realty | Premium Land Investment in Pune</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,7 @@
             theme: {
                 extend: {
                     colors: {
-                        emerald: { 900: '#047857', 950: '#065f46' },
+                        navy: { 50: '#eff6ff', 100: '#dbeafe', 800: '#1e40af', 900: '#1e3a8a', 950: '#172554' },
                         amber: { 400: '#fbbf24', 500: '#f59e0b', 600: '#d97706' },
                         stone: { 50: '#fafaf9', 100: '#f5f5f4', 200: '#e7e5e4', 300: '#d6d3d1', 400: '#a8a29e', 500: '#78716c', 600: '#57534e', 800: '#292524', 900: '#1c1917' }
                     },
@@ -52,17 +52,20 @@
         .page-section.active { display: block; animation: fadeIn 0.4s ease-out forwards; }
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #fafaf9; }
-        ::-webkit-scrollbar-thumb { background: #000832; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb { background: #172554; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #e2c28b; }
     </style>
 </head>
-<body class="font-sans text-stone-800 bg-stone-50 selection:bg-amber-500 selection:text-emerald-950">
+<body class="font-sans text-stone-800 bg-stone-50 selection:bg-amber-500 selection:text-navy-950">
 
     <!-- STANDARD NAVIGATION -->
-    <nav id="main-nav" class="fixed w-full z-50 bg-emerald-950/95 backdrop-blur-md shadow-lg transition-all duration-300 border-b border-emerald-900">
+    <nav id="main-nav" class="fixed w-full z-50 bg-navy-950/95 backdrop-blur-md shadow-lg transition-all duration-300 border-b border-navy-900">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div onclick="navigate('home')" class="cursor-pointer flex items-center">
-                <img src="/asset/sanskar_realty_page_1.png" alt="Avi Realty Logo" class="h-10 md:h-12 w-auto">
+                <img src="/asset/sanskar_realty_page_1.png" alt="Sanskar Realty Logo" class="h-10 md:h-12 w-auto">
+                 <div class=" pl-5 text-2xl font-serif font-extrabold text-emerald-950 tracking-wide cursor-pointer" onclick="navigate('home')">
+                <span class="text-white">Sanskar</span> <span class="text-amber-500">REALTY</span>
+            </div>
             </div>
 
             <!-- Desktop Nav -->
@@ -72,7 +75,7 @@
                 <button onclick="navigate('gallery')" class="nav-link text-stone-200 font-medium text-lg transition-colors hover:text-amber-500 capitalize border-b-2 border-transparent" data-target="gallery">Gallery</button>
                 <button onclick="navigate('projects')" class="nav-link text-stone-200 font-medium text-lg transition-colors hover:text-amber-500 capitalize border-b-2 border-transparent" data-target="projects">Projects</button>
                 <button onclick="navigate('contact')" class="nav-link text-stone-200 font-medium text-lg transition-colors hover:text-amber-500 capitalize border-b-2 border-transparent" data-target="contact">Contact</button>
-                <button onclick="navigate('contact')" class="bg-amber-500 text-emerald-950 px-6 py-2.5 rounded-full font-bold hover:bg-amber-400 transition shadow-lg">
+                <button onclick="navigate('contact')" class="bg-amber-500 text-navy-950 px-6 py-2.5 rounded-full font-bold hover:bg-amber-400 transition shadow-lg">
                     Book Site Visit
                 </button>
             </div>
@@ -84,7 +87,7 @@
         </div>
 
         <!-- Mobile Nav -->
-        <div id="mobile-menu" class="hidden md:hidden bg-emerald-950 border-t border-emerald-900 px-4 py-6 shadow-xl absolute w-full left-0">
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-950 border-t border-navy-900 px-4 py-6 shadow-xl absolute w-full left-0">
             <div class="flex flex-col space-y-4 items-start">
                 <button onclick="navigate('home'); toggleMobileMenu()" class="text-stone-200 text-lg w-full text-left">Home</button>
                 <button onclick="navigate('about'); toggleMobileMenu()" class="text-stone-200 text-lg w-full text-left">About</button>
@@ -92,7 +95,7 @@
                 <button onclick="navigate('projects'); toggleMobileMenu()" class="text-stone-200 text-lg w-full text-left">Projects</button>
                 <button onclick="navigate('contact'); toggleMobileMenu()" class="text-stone-200 text-lg w-full text-left">Contact</button>
                 <button onclick="navigate('landing'); toggleMobileMenu()" class="text-stone-400 text-sm w-full text-left">[Ad Funnel View]</button>
-                <button onclick="navigate('contact'); toggleMobileMenu()" class="bg-amber-500 text-emerald-950 px-6 py-3 w-full rounded-lg font-bold mt-4">
+                <button onclick="navigate('contact'); toggleMobileMenu()" class="bg-amber-500 text-navy-950 px-6 py-3 w-full rounded-lg font-bold mt-4">
                     Book Site Visit
                 </button>
             </div>
@@ -102,10 +105,10 @@
     <!-- LANDING PAGE HEADER (Minimal) -->
     <header id="landing-header" class="hidden bg-white shadow-sm py-4 fixed w-full z-50">
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <div class="text-2xl font-serif font-extrabold text-emerald-950 tracking-wide cursor-pointer" onclick="navigate('home')">
-                Avi <span class="text-amber-500">REALTY</span>
+            <div class="text-2xl font-serif font-extrabold text-navy-950 tracking-wide cursor-pointer" onclick="navigate('home')">
+                Sanskar <span class="text-amber-500">REALTY</span>
             </div>
-            <a href="tel:+919876543210" class="flex items-center text-emerald-900 font-bold hover:text-amber-500 transition">
+            <a href="tel:+919876543210" class="flex items-center text-navy-900 font-bold hover:text-amber-500 transition">
                 <i data-lucide="phone" class="w-5 h-5 mr-2"></i> +91 98xxx43210
             </a>
         </div>
@@ -134,7 +137,7 @@
                 <!-- CONTENT -->
                 <div class="container mx-auto px-4 relative z-10 grid md:grid-cols-2 gap-12 items-center py-20">
                     <div>
-                        <div class="inline-flex items-center space-x-2 bg-emerald-900/50 backdrop-blur border border-emerald-800 px-4 py-2 rounded-full text-amber-500 text-sm font-semibold mb-6">
+                        <div class="inline-flex items-center space-x-2 bg-navy-900/50 backdrop-blur border border-navy-800 px-4 py-2 rounded-full text-amber-500 text-sm font-semibold mb-6">
                             <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
                             <span>Premium Land Assets in Pune</span>
                         </div>
@@ -145,14 +148,14 @@
                         </h1>
 
                         <p class="text-lg md:text-xl text-stone-300 mb-8 max-w-lg leading-relaxed">
-                            Secure your financial future with Avi Realty's high-appreciation land projects in Pune's fastest-growing corridors.
+                            Secure your financial future with Sanskar Realty's high-appreciation land projects in Pune's fastest-growing corridors.
                         </p>
 
                         <div class="flex flex-wrap gap-4">
-                            <button onclick="navigate('projects')" class="bg-amber-500 text-emerald-950 px-8 py-4 rounded-full font-bold hover:bg-amber-400 transition shadow-xl text-lg">
+                            <button onclick="navigate('projects')" class="bg-amber-500 text-navy-950 px-8 py-4 rounded-full font-bold hover:bg-amber-400 transition shadow-xl text-lg">
                                 Explore Projects
                             </button>
-                            <button onclick="navigate('contact')" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-emerald-950 transition text-lg">
+                            <button onclick="navigate('contact')" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-navy-950 transition text-lg">
                                 Book Site Visit
                             </button>
                         </div>
@@ -161,16 +164,16 @@
             </div>
 
             <!-- Mobile Lead Form -->
-            <div class="md:hidden p-4 bg-emerald-900 relative z-20">
-                <div class="p-6 rounded-xl shadow-xl border-t-4 border-amber-500 bg-white text-emerald-950 -mt-16 relative">
+            <div class="md:hidden p-4 bg-navy-900 relative z-20">
+                <div class="p-6 rounded-xl shadow-xl border-t-4 border-amber-500 bg-white text-navy-950 -mt-16 relative">
                     <h3 class="text-xl font-serif font-bold mb-4 text-center">Get Property Details</h3>
                     <form onsubmit="handleFormSubmit(event, this)" class="space-y-4">
-                        <input required type="text" class="w-full px-4 py-3 rounded-lg border bg-stone-50 border-stone-200 focus:border-emerald-600 outline-none transition" placeholder="Full Name">
-                        <input required type="tel" class="w-full px-4 py-3 rounded-lg border bg-stone-50 border-stone-200 focus:border-emerald-600 outline-none transition" placeholder="Phone Number">
-                        <button type="submit" class="w-full bg-amber-500 text-emerald-950 font-bold py-3 rounded-lg hover:bg-amber-400 transition shadow-lg">Get Details</button>
+                        <input required type="text" class="w-full px-4 py-3 rounded-lg border bg-stone-50 border-stone-200 focus:border-blue-600 outline-none transition" placeholder="Full Name">
+                        <input required type="tel" class="w-full px-4 py-3 rounded-lg border bg-stone-50 border-stone-200 focus:border-blue-600 outline-none transition" placeholder="Phone Number">
+                        <button type="submit" class="w-full bg-amber-500 text-navy-950 font-bold py-3 rounded-lg hover:bg-amber-400 transition shadow-lg">Get Details</button>
                     </form>
                     <div class="form-success hidden text-center py-6">
-                        <i data-lucide="check-circle-2" class="w-12 h-12 text-emerald-500 mx-auto mb-2"></i>
+                        <i data-lucide="check-circle-2" class="w-12 h-12 text-blue-500 mx-auto mb-2"></i>
                         <p class="font-semibold">Request Received!</p>
                     </div>
                 </div>
@@ -180,19 +183,19 @@
             <div class="py-24 bg-stone-50">
                 <div class="container mx-auto px-4">
                     <div class="text-center mb-16">
-                        <h2 class="text-4xl font-serif font-bold text-emerald-950 mb-4">Our Expertise</h2>
+                        <h2 class="text-4xl font-serif font-bold text-navy-950 mb-4">Our Expertise</h2>
                         <div class="w-24 h-1 bg-amber-500 mx-auto"></div>
                     </div>
                     <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                         <div class="bg-white p-10 rounded-2xl shadow-xl hover:-translate-y-2 transition-transform duration-300 border border-stone-100">
-                            <div class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mb-6 text-emerald-700">
+                            <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 text-blue-700">
                                 <i data-lucide="map" class="w-8 h-8"></i>
                             </div>
-                            <h3 class="text-2xl font-bold text-emerald-950 mb-4">Land Investment</h3>
+                            <h3 class="text-2xl font-bold text-navy-950 mb-4">Land Investment</h3>
                             <p class="text-stone-600 leading-relaxed mb-6">
                                 Strategic land acquisitions in high-growth corridors. We identify plots that guarantee high ROI and safe investment for future generations.
                             </p>
-                            <button onclick="navigate('projects')" class="text-emerald-700 font-bold flex items-center hover:text-amber-500 transition">
+                            <button onclick="navigate('projects')" class="text-blue-700 font-bold flex items-center hover:text-amber-500 transition">
                                 View Land Parcels <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
                             </button>
                         </div>
@@ -200,11 +203,11 @@
                             <div class="w-16 h-16 bg-amber-100 rounded-2xl flex items-center justify-center mb-6 text-amber-600">
                                 <i data-lucide="building-2" class="w-8 h-8"></i>
                             </div>
-                            <h3 class="text-2xl font-bold text-emerald-950 mb-4">Development Projects</h3>
+                            <h3 class="text-2xl font-bold text-navy-950 mb-4">Development Projects</h3>
                             <p class="text-stone-600 leading-relaxed mb-6">
                                 Creating structured, gated communities with world-class amenities, clear titles, and infrastructure ready for immediate construction.
                             </p>
-                            <button onclick="navigate('projects')" class="text-emerald-700 font-bold flex items-center hover:text-amber-500 transition">
+                            <button onclick="navigate('projects')" class="text-blue-700 font-bold flex items-center hover:text-amber-500 transition">
                                 Explore Developments <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
                             </button>
                         </div>
@@ -216,7 +219,7 @@
             <div class="py-24 bg-white">
                 <div class="container mx-auto px-4">
                     <div class="text-center mb-16">
-                        <h2 class="text-4xl font-serif font-bold text-emerald-950 mb-4">Prime Locations</h2>
+                        <h2 class="text-4xl font-serif font-bold text-navy-950 mb-4">Prime Locations</h2>
                         <p class="text-stone-600 max-w-2xl mx-auto">Strategically chosen areas with upcoming infrastructure developments ensuring maximum appreciation.</p>
                         <div class="w-24 h-1 bg-amber-500 mx-auto mt-6"></div>
                     </div>
@@ -227,7 +230,7 @@
             </div>
 
             <!-- Why Invest Section -->
-            <div class="py-24 bg-emerald-950 text-white relative overflow-hidden">
+            <div class="py-24 bg-navy-950 text-white relative overflow-hidden">
                 <div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
                     <svg viewBox="0 0 100 100" class="w-full h-full fill-current"><circle cx="50" cy="50" r="40" class="stroke-amber-500 stroke-2 fill-none"/></svg>
                 </div>
@@ -237,7 +240,7 @@
                             <h2 class="text-4xl font-serif font-bold text-amber-500 mb-8">Why Invest in Land?</h2>
                             <div class="space-y-6">
                                 <div class="flex gap-4">
-                                    <div class="w-12 h-12 rounded-full bg-emerald-900 flex items-center justify-center shrink-0 border border-emerald-800">
+                                    <div class="w-12 h-12 rounded-full bg-navy-900 flex items-center justify-center shrink-0 border border-navy-800">
                                         <i data-lucide="trending-up" class="w-6 h-6 text-amber-500"></i>
                                     </div>
                                     <div>
@@ -246,7 +249,7 @@
                                     </div>
                                 </div>
                                 <div class="flex gap-4">
-                                    <div class="w-12 h-12 rounded-full bg-emerald-900 flex items-center justify-center shrink-0 border border-emerald-800">
+                                    <div class="w-12 h-12 rounded-full bg-navy-900 flex items-center justify-center shrink-0 border border-navy-800">
                                         <i data-lucide="shield-check" class="w-6 h-6 text-amber-500"></i>
                                     </div>
                                     <div>
@@ -255,7 +258,7 @@
                                     </div>
                                 </div>
                                 <div class="flex gap-4">
-                                    <div class="w-12 h-12 rounded-full bg-emerald-900 flex items-center justify-center shrink-0 border border-emerald-800">
+                                    <div class="w-12 h-12 rounded-full bg-navy-900 flex items-center justify-center shrink-0 border border-navy-800">
                                         <i data-lucide="leaf" class="w-6 h-6 text-amber-500"></i>
                                     </div>
                                     <div>
@@ -266,8 +269,8 @@
                             </div>
                         </div>
                         <div>
-                            <h2 class="text-4xl font-serif font-bold text-amber-500 mb-8">Why Avi Realty?</h2>
-                            <div class="bg-emerald-900/50 p-8 rounded-2xl border border-emerald-800 backdrop-blur">
+                            <h2 class="text-4xl font-serif font-bold text-amber-500 mb-8">Why Sanskar Realty?</h2>
+                            <div class="bg-navy-900/50 p-8 rounded-2xl border border-navy-800 backdrop-blur">
                                 <ul class="space-y-6">
                                     <li class="flex items-start">
                                         <i data-lucide="check-circle-2" class="w-6 h-6 text-amber-500 mr-4 shrink-0 mt-0.5"></i>
@@ -305,27 +308,27 @@
         <section id="page-about" class="page-section bg-stone-50 min-h-screen pt-12 pb-16">
             <div class="container mx-auto px-4">
                 <div class="max-w-4xl mx-auto text-center mb-16">
-                    <h1 class="text-4xl md:text-5xl font-serif font-bold text-emerald-950 mb-6">Building Trust, Block by Block.</h1>
+                    <h1 class="text-4xl md:text-5xl font-serif font-bold text-navy-950 mb-6">Building Trust, Block by Block.</h1>
                     <div class="w-24 h-1 bg-amber-500 mx-auto mb-8"></div>
                     <p class="text-xl text-stone-600 leading-relaxed">
-                        At Avi Realty, we don't just sell land; we help you secure your future. With years of expertise in the Pune real estate market, we identify pristine land parcels and develop them into premium assets.
+                        At Sanskar Realty, we don't just sell land; we help you secure your future. With years of expertise in the Pune real estate market, we identify pristine land parcels and develop them into premium assets.
                     </p>
                 </div>
                 <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto mb-20 items-center">
                     <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Office Meeting" class="rounded-2xl shadow-2xl">
                     <div>
-                        <h2 class="text-3xl font-bold text-emerald-950 mb-6">Our Vision</h2>
+                        <h2 class="text-3xl font-bold text-navy-950 mb-6">Our Vision</h2>
                         <p class="text-stone-600 mb-8 leading-relaxed text-lg">
                             To be the most trusted name in land development, creating wealth for our investors while preserving the natural beauty of the environment. We believe in transparent dealings, clear documentation, and delivering on our promises.
                         </p>
                         <div class="grid grid-cols-2 gap-6">
                             <div class="bg-white p-6 rounded-xl shadow-md border border-stone-100 text-center">
                                 <h4 class="text-4xl font-bold text-amber-500 mb-2">500+</h4>
-                                <p class="font-semibold text-emerald-950">Happy Families</p>
+                                <p class="font-semibold text-navy-950">Happy Families</p>
                             </div>
                             <div class="bg-white p-6 rounded-xl shadow-md border border-stone-100 text-center">
                                 <h4 class="text-4xl font-bold text-amber-500 mb-2">50+</h4>
-                                <p class="font-semibold text-emerald-950">Acres Developed</p>
+                                <p class="font-semibold text-navy-950">Acres Developed</p>
                             </div>
                         </div>
                     </div>
@@ -337,7 +340,7 @@
         <section id="page-gallery" class="page-section bg-stone-50 min-h-screen pt-12 pb-20">
             <div class="container mx-auto px-4">
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h1 class="text-4xl md:text-5xl font-serif font-bold text-emerald-950 mb-6">Gallery</h1>
+                    <h1 class="text-4xl md:text-5xl font-serif font-bold text-navy-950 mb-6">Gallery</h1>
                     <p class="text-lg text-stone-600">A glimpse into our premium land projects across Pune.</p>
                     <div class="w-24 h-1 bg-amber-500 mx-auto mt-6"></div>
                 </div>
@@ -356,7 +359,7 @@
         <section id="page-projects" class="page-section bg-stone-50 min-h-screen pt-12 pb-20">
             <div class="container mx-auto px-4">
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h1 class="text-4xl md:text-5xl font-serif font-bold text-emerald-950 mb-6">Our Premium Projects</h1>
+                    <h1 class="text-4xl md:text-5xl font-serif font-bold text-navy-950 mb-6">Our Premium Projects</h1>
                     <p class="text-lg text-stone-600">Discover handpicked land parcels in Pune's most promising locations.</p>
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto" id="projects-grid">
@@ -369,12 +372,12 @@
         <section id="page-project-detail" class="page-section bg-white min-h-screen">
             <div class="h-[60vh] relative">
                 <img id="pd-image" src="" alt="Project" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-emerald-950/60 flex items-center">
+                <div class="absolute inset-0 bg-navy-950/60 flex items-center">
                     <div class="container mx-auto px-4 mt-16">
                         <button onclick="navigate('projects')" class="text-white/80 hover:text-white mb-6 flex items-center transition">
                             <i data-lucide="chevron-left" class="w-4 h-4 mr-1"></i> Back to Projects
                         </button>
-                        <div id="pd-type" class="bg-amber-500 text-emerald-950 inline-block px-4 py-1 rounded-full text-sm font-bold mb-4">Type</div>
+                        <div id="pd-type" class="bg-amber-500 text-navy-950 inline-block px-4 py-1 rounded-full text-sm font-bold mb-4">Type</div>
                         <h1 id="pd-title" class="text-5xl md:text-6xl font-serif font-bold text-white mb-4">Project Name</h1>
                         <p class="text-2xl text-stone-200 flex items-center"><i data-lucide="map-pin" class="mr-2 w-6 h-6"></i> <span id="pd-location">Location</span></p>
                     </div>
@@ -385,36 +388,36 @@
                 <div class="grid lg:grid-cols-3 gap-12">
                     <div class="lg:col-span-2 space-y-12">
                         <div>
-                            <h2 class="text-3xl font-serif font-bold text-emerald-950 mb-6">About the Project</h2>
+                            <h2 class="text-3xl font-serif font-bold text-navy-950 mb-6">About the Project</h2>
                             <p id="pd-desc" class="text-lg text-stone-600 leading-relaxed">Description goes here.</p>
                         </div>
                         <div>
-                            <h2 class="text-3xl font-serif font-bold text-emerald-950 mb-6">Key Highlights</h2>
+                            <h2 class="text-3xl font-serif font-bold text-navy-950 mb-6">Key Highlights</h2>
                             <div id="pd-features" class="grid sm:grid-cols-2 gap-4"></div>
                         </div>
                         <div>
-                            <h2 class="text-3xl font-serif font-bold text-emerald-950 mb-6">Layout & Map</h2>
+                            <h2 class="text-3xl font-serif font-bold text-navy-950 mb-6">Layout & Map</h2>
                             <img id="pd-map" src="" alt="Layout Map" class="w-full rounded-2xl shadow-lg border border-stone-200">
                         </div>
                     </div>
                     <div>
                         <div class="sticky top-24">
-                            <div class="bg-emerald-950 text-white p-8 rounded-t-2xl text-center">
+                            <div class="bg-navy-950 text-white p-8 rounded-t-2xl text-center">
                                 <p class="text-stone-300 mb-2">Investment Starting From</p>
                                 <p id="pd-price" class="text-3xl font-bold text-amber-500">Price</p>
                             </div>
                             <div class="p-8 rounded-b-xl shadow-2xl border-t-0 bg-white border border-stone-200">
-                                <h3 class="text-xl font-serif font-bold mb-6 text-center text-emerald-950">Interested in this property?</h3>
+                                <h3 class="text-xl font-serif font-bold mb-6 text-center text-navy-950">Interested in this property?</h3>
                                 <form onsubmit="handleFormSubmit(event, this)" class="space-y-4">
-                                    <input required type="text" class="w-full px-4 py-3 rounded-lg border bg-stone-50 border-stone-200 focus:border-emerald-600 outline-none transition" placeholder="Full Name">
-                                    <input required type="tel" class="w-full px-4 py-3 rounded-lg border bg-stone-50 border-stone-200 focus:border-emerald-600 outline-none transition" placeholder="Phone Number">
-                                    <button type="submit" class="w-full bg-amber-500 text-emerald-950 font-bold py-4 rounded-lg hover:bg-amber-400 transition shadow-lg mt-2 text-lg">
+                                    <input required type="text" class="w-full px-4 py-3 rounded-lg border bg-stone-50 border-stone-200 focus:border-blue-600 outline-none transition" placeholder="Full Name">
+                                    <input required type="tel" class="w-full px-4 py-3 rounded-lg border bg-stone-50 border-stone-200 focus:border-blue-600 outline-none transition" placeholder="Phone Number">
+                                    <button type="submit" class="w-full bg-amber-500 text-navy-950 font-bold py-4 rounded-lg hover:bg-amber-400 transition shadow-lg mt-2 text-lg">
                                         Request Details
                                     </button>
                                 </form>
                                 <div class="form-success hidden text-center py-6">
-                                    <i data-lucide="check-circle-2" class="w-12 h-12 text-emerald-500 mx-auto mb-2"></i>
-                                    <p class="font-semibold text-emerald-950">Request Sent!</p>
+                                    <i data-lucide="check-circle-2" class="w-12 h-12 text-blue-500 mx-auto mb-2"></i>
+                                    <p class="font-semibold text-navy-950">Request Sent!</p>
                                 </div>
                             </div>
                         </div>
@@ -427,14 +430,14 @@
         <section id="page-contact" class="page-section bg-stone-50 min-h-screen pt-12 pb-20">
             <div class="container mx-auto px-4 max-w-6xl">
                 <div class="text-center mb-16">
-                    <h1 class="text-4xl md:text-5xl font-serif font-bold text-emerald-950 mb-6">Get In Touch</h1>
+                    <h1 class="text-4xl md:text-5xl font-serif font-bold text-navy-950 mb-6">Get In Touch</h1>
                     <p class="text-lg text-stone-600">Have questions? We're here to help you make the right investment.</p>
                     <div class="w-24 h-1 bg-amber-500 mx-auto mt-8"></div>
                 </div>
                 <div class="grid lg:grid-cols-2 gap-12 bg-white rounded-2xl shadow-xl overflow-hidden">
                     <!-- Contact Info -->
-                    <div class="bg-emerald-950 text-white p-12 flex flex-col justify-between relative overflow-hidden">
-                        <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-emerald-900 rounded-full opacity-50"></div>
+                    <div class="bg-navy-950 text-white p-12 flex flex-col justify-between relative overflow-hidden">
+                        <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-navy-900 rounded-full opacity-50"></div>
                         <div class="relative z-10">
                             <h3 class="text-3xl font-bold mb-8 text-amber-500">Contact Information</h3>
                             <div class="space-y-8">
@@ -449,14 +452,14 @@
                                     <i data-lucide="mail" class="w-6 h-6 text-amber-500 mr-4 mt-1"></i>
                                     <div>
                                         <p class="text-sm text-stone-400 mb-1">Email Us</p>
-                                        <p class="text-xl font-semibold">info@avirealty.com</p>
+                                        <p class="text-xl font-semibold"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2a43444c456a4b5c43584f4b465e5304494547">[email&#160;protected]</a></p>
                                     </div>
                                 </div>
                                 <div class="flex items-start">
                                     <i data-lucide="map-pin" class="w-6 h-6 text-amber-500 mr-4 mt-1"></i>
                                     <div>
                                         <p class="text-sm text-stone-400 mb-1">Corporate Office</p>
-                                        <p class="text-lg leading-relaxed">101, Avi Realty Trade Center,<br>FC Road, Shivaji Nagar,<br>Pune, Maharashtra 411005</p>
+                                        <p class="text-lg leading-relaxed">101, Sanskar Realty Trade Center,<br>FC Road, Shivaji Nagar,<br>Pune, Maharashtra 411005</p>
                                     </div>
                                 </div>
                             </div>
@@ -465,27 +468,27 @@
 
                     <!-- Contact Form -->
                     <div class="p-12 relative">
-                        <h3 class="text-2xl font-bold text-emerald-950 mb-6">Send a Message</h3>
+                        <h3 class="text-2xl font-bold text-navy-950 mb-6">Send a Message</h3>
                         <form onsubmit="handleFormSubmit(event, this)" class="space-y-6">
                             <div>
                                 <label class="block text-sm font-medium text-stone-600 mb-2">Name</label>
-                                <input required type="text" class="w-full px-4 py-3 rounded-lg border border-stone-200 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none transition bg-stone-50">
+                                <input required type="text" class="w-full px-4 py-3 rounded-lg border border-stone-200 focus:border-blue-600 focus:ring-1 focus:ring-blue-600 outline-none transition bg-stone-50">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-stone-600 mb-2">Phone / WhatsApp</label>
-                                <input required type="tel" class="w-full px-4 py-3 rounded-lg border border-stone-200 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none transition bg-stone-50">
+                                <input required type="tel" class="w-full px-4 py-3 rounded-lg border border-stone-200 focus:border-blue-600 focus:ring-1 focus:ring-blue-600 outline-none transition bg-stone-50">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-stone-600 mb-2">Message</label>
-                                <textarea required rows="4" class="w-full px-4 py-3 rounded-lg border border-stone-200 focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none transition bg-stone-50"></textarea>
+                                <textarea required rows="4" class="w-full px-4 py-3 rounded-lg border border-stone-200 focus:border-blue-600 focus:ring-1 focus:ring-blue-600 outline-none transition bg-stone-50"></textarea>
                             </div>
-                            <button type="submit" class="bg-amber-500 text-emerald-950 font-bold py-4 px-8 rounded-lg hover:bg-amber-400 transition shadow-lg w-full">
+                            <button type="submit" class="bg-amber-500 text-navy-950 font-bold py-4 px-8 rounded-lg hover:bg-amber-400 transition shadow-lg w-full">
                                 Submit Inquiry
                             </button>
                         </form>
                         <div class="form-success hidden absolute inset-0 bg-white flex flex-col items-center justify-center p-12 text-center z-10">
-                            <i data-lucide="check-circle-2" class="w-20 h-20 text-emerald-500 mb-4"></i>
-                            <h3 class="text-2xl font-bold text-emerald-950 mb-2">Message Sent Successfully!</h3>
+                            <i data-lucide="check-circle-2" class="w-20 h-20 text-blue-500 mb-4"></i>
+                            <h3 class="text-2xl font-bold text-navy-950 mb-2">Message Sent Successfully!</h3>
                             <p class="text-stone-600">We will get back to you shortly.</p>
                             <button onclick="this.parentElement.classList.add('hidden'); this.parentElement.previousElementSibling.reset();" class="mt-6 text-amber-600 font-semibold underline">Send another message</button>
                         </div>
@@ -503,43 +506,43 @@
                             <div class="inline-block bg-amber-100 text-amber-700 font-bold px-4 py-1 rounded-full text-sm mb-6 border border-amber-200">
                                 Limited Plots Available in Urse
                             </div>
-                            <h1 class="text-5xl lg:text-6xl font-serif font-bold text-emerald-950 leading-tight mb-6">
-                                Your Dream Farmhouse Plot Awaits at <span class="text-emerald-700">Green Valley Urse</span>
+                            <h1 class="text-5xl lg:text-6xl font-serif font-bold text-navy-950 leading-tight mb-6">
+                                Your Dream Farmhouse Plot Awaits at <span class="text-blue-700">Green Valley Urse</span>
                             </h1>
                             <p class="text-xl text-stone-600 mb-8 leading-relaxed">
                                 Invest in premium NA plots near the Mumbai-Pune Expressway. Secure high returns and build your weekend retreat in nature's lap.
                             </p>
                             <div class="space-y-4 mb-8">
-                                <div class="flex items-center text-lg text-emerald-900 font-medium">
+                                <div class="flex items-center text-lg text-navy-900 font-medium">
                                     <i data-lucide="check-circle-2" class="w-6 h-6 text-amber-500 mr-3 shrink-0"></i> Clear Title & PMRDA Approved
                                 </div>
-                                <div class="flex items-center text-lg text-emerald-900 font-medium">
+                                <div class="flex items-center text-lg text-navy-900 font-medium">
                                     <i data-lucide="check-circle-2" class="w-6 h-6 text-amber-500 mr-3 shrink-0"></i> Internal Tar Roads & Infrastructure
                                 </div>
-                                <div class="flex items-center text-lg text-emerald-900 font-medium">
+                                <div class="flex items-center text-lg text-navy-900 font-medium">
                                     <i data-lucide="check-circle-2" class="w-6 h-6 text-amber-500 mr-3 shrink-0"></i> 24/7 Security & Gated Community
                                 </div>
                             </div>
-                            <p class="text-3xl font-bold text-emerald-950">Starting at <span class="text-amber-500">₹25 Lacs</span></p>
+                            <p class="text-3xl font-bold text-navy-950">Starting at <span class="text-amber-500">₹25 Lacs</span></p>
                         </div>
                         <div class="relative">
-                            <div class="absolute inset-0 bg-emerald-900 transform translate-x-4 translate-y-4 rounded-2xl"></div>
+                            <div class="absolute inset-0 bg-navy-900 transform translate-x-4 translate-y-4 rounded-2xl"></div>
                             <div class="relative bg-white p-8 rounded-2xl shadow-xl border border-stone-100">
                                 <div class="text-center mb-6">
-                                    <h3 class="text-2xl font-bold text-emerald-950 mb-2">Book a Free Site Visit Today!</h3>
+                                    <h3 class="text-2xl font-bold text-navy-950 mb-2">Book a Free Site Visit Today!</h3>
                                     <p class="text-stone-500 text-sm">Fill the form below and avail exclusive pre-launch offers.</p>
                                 </div>
                                 <form onsubmit="handleFormSubmit(event, this)" class="space-y-5">
                                     <input required type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg border border-stone-200 bg-stone-50 focus:border-amber-500 outline-none">
                                     <input required type="tel" placeholder="Phone Number" class="w-full px-4 py-3 rounded-lg border border-stone-200 bg-stone-50 focus:border-amber-500 outline-none">
                                     <input required type="email" placeholder="Email Address" class="w-full px-4 py-3 rounded-lg border border-stone-200 bg-stone-50 focus:border-amber-500 outline-none">
-                                    <button type="submit" class="w-full bg-amber-500 text-emerald-950 font-bold py-4 rounded-lg hover:bg-amber-400 transition shadow-lg text-lg animate-pulse">
+                                    <button type="submit" class="w-full bg-amber-500 text-navy-950 font-bold py-4 rounded-lg hover:bg-amber-400 transition shadow-lg text-lg animate-pulse">
                                         Claim Offer & Request Call
                                     </button>
                                 </form>
                                 <div class="form-success hidden text-center py-8 absolute inset-0 bg-white rounded-2xl flex flex-col justify-center items-center">
-                                    <i data-lucide="check-circle-2" class="w-16 h-16 text-emerald-500 mb-4"></i>
-                                    <p class="text-2xl font-bold text-emerald-950">Offer Claimed!</p>
+                                    <i data-lucide="check-circle-2" class="w-16 h-16 text-blue-500 mb-4"></i>
+                                    <p class="text-2xl font-bold text-navy-950">Offer Claimed!</p>
                                     <p class="text-stone-600 mt-2">We will call you in 5 minutes.</p>
                                 </div>
                             </div>
@@ -547,20 +550,20 @@
                     </div>
                 </div>
             </div>
-            <footer class="bg-emerald-950 py-8 text-center text-stone-400 text-sm">
-                &copy; <span id="year-landing"></span> Avi Realty. All rights reserved.
+            <footer class="bg-navy-950 py-8 text-center text-stone-400 text-sm">
+                &copy; <span id="year-landing"></span> Sanskar Realty. All rights reserved.
             </footer>
         </section>
 
     </main>
 
     <!-- STANDARD FOOTER -->
-    <footer id="main-footer" class="bg-emerald-950 text-stone-300 border-t-4 border-amber-500 pt-16 pb-8">
+    <footer id="main-footer" class="bg-navy-950 text-stone-300 border-t-4 border-amber-500 pt-16 pb-8">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-12 mb-12">
                 <div class="col-span-1 md:col-span-1">
                     <div class="text-2xl font-serif font-extrabold text-white tracking-wide mb-6 cursor-pointer" onclick="navigate('home')">
-                        Avi <span class="text-amber-500">REALTY</span>
+                        Sanskar <span class="text-amber-500">REALTY</span>
                     </div>
                     <p class="text-stone-400 leading-relaxed mb-6">
                         Building wealth tomorrow by investing in the premium land spaces of today. Your trusted real estate partner in Pune.
@@ -587,12 +590,12 @@
                     <h4 class="text-lg font-bold text-white mb-6">Connect</h4>
                     <div class="space-y-4">
                         <p class="flex items-center"><i data-lucide="phone" class="w-5 h-5 mr-3 text-amber-500"></i> +91 98765 43210</p>
-                        <p class="flex items-center"><i data-lucide="mail" class="w-5 h-5 mr-3 text-amber-500"></i> info@avirealty.com</p>
+                        <p class="flex items-center"><i data-lucide="mail" class="w-5 h-5 mr-3 text-amber-500"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="89e0e7efe6c9e8ffe0fbece8e5fdf0a7eae6e4">[email&#160;protected]</a></p>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-emerald-900 pt-8 text-center text-stone-500 text-sm flex flex-col md:flex-row justify-between items-center">
-                <p>&copy; <span id="year-main"></span> Avi Realty. All rights reserved.</p>
+            <div class="border-t border-navy-900 pt-8 text-center text-stone-500 text-sm flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; <span id="year-main"></span> Sanskar Realty. All rights reserved.</p>
                 <div class="space-x-4 mt-4 md:mt-0">
                     <a href="#" class="hover:text-amber-500 transition">Privacy Policy</a>
                     <a href="#" class="hover:text-amber-500 transition">Terms of Service</a>
@@ -606,13 +609,4 @@
        class="fixed bottom-6 right-6 z-[60] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center group"
        aria-label="Chat on WhatsApp">
         <i data-lucide="message-circle" class="w-8 h-8 fill-current"></i>
-        <span class="absolute right-full mr-4 bg-white text-emerald-950 px-4 py-2 rounded-lg shadow-lg font-semibold text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-            Chat with us!
-        </span>
-    </a>
-
-    <!-- JAVASCRIPT (external file) -->
-    <script src="script.js"></script>
-
-</body>
-</html>
+        <span class="absolute right-full mr-4 bg-white text-navy-950 px-4 py-2 rounded-lg shadow-lg font-semibold text-s
