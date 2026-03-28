@@ -153,7 +153,7 @@ function renderHomeLocations() {
         html += `
         <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer" onclick="navigate('projects')">
             <img src="${PROJECTS[i].image}" alt="${loc}" class="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110">
-            <div class="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-950/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
             <div class="absolute bottom-0 left-0 p-8 w-full">
                 <h3 class="text-2xl font-bold text-white mb-2">${loc}</h3>
                 <p class="text-amber-500 flex items-center font-semibold">
@@ -178,7 +178,7 @@ function renderProjectsList() {
              onclick="navigate('project-detail', '${project.id}')">
             <div class="relative h-64 overflow-hidden">
                 <img src="${project.image}" alt="${project.name}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                <div class="absolute top-4 left-4 bg-amber-500 text-emerald-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                <div class="absolute top-4 left-4 bg-amber-500 text-navy-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                     ${project.type}
                 </div>
             </div>
@@ -186,9 +186,9 @@ function renderProjectsList() {
                 <div class="flex items-center text-stone-500 text-sm mb-3">
                     <i data-lucide="map-pin" class="w-4 h-4 mr-1"></i> ${project.location}
                 </div>
-                <h3 class="text-2xl font-bold text-emerald-950 mb-3">${project.name}</h3>
-                <p class="text-emerald-700 font-bold text-xl mb-6">${project.price}</p>
-                <button class="w-full border-2 border-emerald-900 text-emerald-900 font-bold py-3 rounded-lg hover:bg-emerald-900 hover:text-white transition flex justify-center items-center">
+                <h3 class="text-2xl font-bold text-navy-950 mb-3">${project.name}</h3>
+                <p class="text-navy-700 font-bold text-xl mb-6">${project.price}</p>
+                <button class="w-full border-2 border-navy-900 text-navy-900 font-bold py-3 rounded-lg hover:bg-navy-900 hover:text-white transition flex justify-center items-center">
                     View Details <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
                 </button>
             </div>
@@ -216,7 +216,7 @@ function loadProjectDetails(id) {
         featuresHtml += `
         <div class="flex items-center p-4 bg-stone-50 rounded-lg border border-stone-100">
             <i data-lucide="check-circle-2" class="w-6 h-6 text-amber-500 mr-3 shrink-0"></i>
-            <span class="font-semibold text-emerald-950">${feat}</span>
+            <span class="font-semibold text-navy-950">${feat}</span>
         </div>`;
     });
     featuresContainer.innerHTML = featuresHtml;
