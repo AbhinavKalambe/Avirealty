@@ -64,13 +64,15 @@ function initHeroSlider() {
 // ============================================================
 document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
-    document.getElementById('year-main').textContent    = new Date().getFullYear();
-    document.getElementById('year-landing').textContent = new Date().getFullYear();
+
+    const yearMain = document.getElementById('year-main');
+    if (yearMain) yearMain.textContent = new Date().getFullYear();
+
+    const yearLanding = document.getElementById('year-landing');
+    if (yearLanding) yearLanding.textContent = new Date().getFullYear();
 
     renderHomeLocations();
     renderProjectsList();
-
-    // Bug 2 fix: actually call initHeroSlider on page load
     initHeroSlider();
 });
 
@@ -221,21 +223,87 @@ function loadProjectDetails(id) {
     });
     featuresContainer.innerHTML = featuresHtml;
 }
+// Initialize EmailJS
+(function () {
+    emailjs.init("RoCZ9hPuBXxAMV0vr"); // 🔁 replace
+})();
 
-// ============================================================
-// FORM HANDLING
-// ============================================================
-function handleFormSubmit(e, form) {
-    e.preventDefault();
-    const successDiv = form.nextElementSibling;
+document.addEventListener("DOMContentLoaded", function () {
 
-    form.classList.add('hidden');
-    successDiv.classList.remove('hidden');
+    const form = document.getElementById("contact-form");
 
-    // Reset form and hide success message after 4 seconds
-    setTimeout(() => {
-        form.reset();
-        form.classList.remove('hidden');
-        successDiv.classList.add('hidden');
-    }, 4000);
-}
+    if (!form) return;
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const button = form.querySelector("button");
+
+        button.disabled = true;
+        button.innerText = "Sending...";
+
+        emailjs.sendForm(
+            "service_tv4xr44",   // 🔁 replace
+            "template_x0cs7s7",  // 🔁 replace
+            form
+        )
+        .then(() => {
+            // Show success popup
+            const successBox = document.querySelector(".form-success");
+            if (successBox) successBox.classList.remove("hidden");
+
+            form.reset();
+
+            button.disabled = false;
+            button.innerText = "Submit Inquiry";
+        })
+        .catch((error) => {
+            console.error("EmailJS Error:", error);
+            alert("❌ Failed to send. Try again.");
+
+            button.disabled = false;
+            button.innerText = "Submit Inquiry";
+        });
+    });
+
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    document.querySelectorAll(".project-form").forEach(form => {
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const button = form.querySelector("button");
+
+            button.disabled = true;
+            button.innerText = "Sending...";
+
+            emailjs.sendForm(
+                "service_tv4xr44",
+                "template_x0cs7s7",
+                form
+            )
+            .then(() => {
+                const successBox = form.nextElementSibling;
+                if (successBox) successBox.classList.remove("hidden");
+
+                form.reset();
+
+                button.disabled = false;
+                button.innerText = "Request Details";
+            })
+            .catch((error) => {
+                console.error(error);
+                alert("❌ Failed to send");
+
+                button.disabled = false;
+                button.innerText = "Request Details";
+            });
+
+        });
+
+    });
+
+});

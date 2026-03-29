@@ -12,6 +12,7 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -98,7 +99,6 @@
                 <button onclick="navigate('gallery'); toggleMobileMenu()" class="text-stone-200 text-lg w-full text-left">Gallery</button>
                 <button onclick="navigate('projects'); toggleMobileMenu()" class="text-stone-200 text-lg w-full text-left">Projects</button>
                 <button onclick="navigate('contact'); toggleMobileMenu()" class="text-stone-200 text-lg w-full text-left">Contact</button>
-                <button onclick="navigate('landing'); toggleMobileMenu()" class="text-stone-400 text-sm w-full text-left">[Ad Funnel View]</button>
                 <button onclick="navigate('contact'); toggleMobileMenu()" class="bg-amber-500 text-navy-950 px-6 py-3 w-full rounded-lg font-bold mt-4">
                     Book Site Visit
                 </button>
@@ -174,37 +174,134 @@
             <div class="py-24 bg-stone-50">
                 <div class="container mx-auto px-4">
                     <div class="text-center mb-16">
-                        <h2 class="text-4xl font-serif font-bold text-navy-950 mb-4">Our Expertise</h2>
+                        <h2 class="text-4xl font-serif font-bold text-navy-950 mb-4">The Growth</h2>
                         <div class="w-24 h-1 bg-amber-500 mx-auto"></div>
                     </div>
                     <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                        <div class="bg-white p-10 rounded-2xl shadow-xl hover:-translate-y-2 transition-transform duration-300 border border-stone-100">
-                            <div class="w-16 h-16 bg-navy-100 rounded-2xl flex items-center justify-center mb-6 text-navy-700">
-                                <i data-lucide="map" class="w-8 h-8"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold text-navy-950 mb-4">Land Investment</h3>
-                            <p class="text-stone-600 leading-relaxed mb-6">
-                                Strategic land acquisitions in high-growth corridors. We identify plots that guarantee high ROI and safe investment for future generations.
-                            </p>
-                            <button onclick="navigate('projects')" class="text-navy-700 font-bold flex items-center hover:text-amber-500 transition">
-                                View Land Parcels <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
-                            </button>
+                        <div class="bg-white p-10 rounded-1xl shadow-xl hover:-translate-y-2 transition-transform duration-300 border border-stone-100">
+                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600&q=80" 
+     alt="Hills" 
+     class="highlight-img">
                         </div>
                         <div class="bg-white p-10 rounded-2xl shadow-xl hover:-translate-y-2 transition-transform duration-300 border border-stone-100">
                             <div class="w-16 h-16 bg-amber-100 rounded-2xl flex items-center justify-center mb-6 text-amber-600">
                                 <i data-lucide="building-2" class="w-8 h-8"></i>
                             </div>
-                            <h3 class="text-2xl font-bold text-navy-950 mb-4">Development Projects</h3>
+                            <h3 class="text-2xl font-bold text-navy-950 mb-4">Invest where the growth is investing</h3>
                             <p class="text-stone-600 leading-relaxed mb-6">
-                                Creating structured, gated communities with world-class amenities, clear titles, and infrastructure ready for immediate construction.
+                               Invest where growth is not just promised, but consistently delivered. With rapidly developing infrastructure, increasing demand, and strong future potential, this location offers the perfect opportunity to secure your investment while watching it appreciate over time. Whether you're planning for a weekend retreat or long-term returns, this is where smart investors choose to grow their wealth.
                             </p>
-                            <button onclick="navigate('projects')" class="text-navy-700 font-bold flex items-center hover:text-amber-500 transition">
-                                Explore Developments <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                            <button onclick="navigate('projects')" class="text-navy-700 font-bold flex items-left hover:text-amber-500 transition">
+                                Explore Projects <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
+            <section class="bg-stone-100 py-16">
+  <div class="container mx-auto px-6">
+
+    <!-- Heading -->
+    <h2 class="text-4xl md:text-5xl font-serif font-bold text-teal-900 mb-12">
+      Highlights
+    </h2>
+
+    <!-- Grid -->
+    <div class="grid md:grid-cols-2 gap-12">
+
+      <!-- Item -->
+      <div class="flex items-start gap-4">
+        <div class="w-16 h-16 flex items-center justify-center border-4 border-green-500 rounded-full">
+          <span class="text-green-700 text-2xl">✔</span>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">
+            Secure weekends, premium lifestyle:
+          </h3>
+          <p class="text-gray-600">
+            Invest in peace of mind with clear titles, high security, and a plethora of amenities.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="flex items-start gap-4">
+        <div class="w-16 h-16 flex items-center justify-center border-4 border-green-500 rounded-full">
+          <span class="text-green-700 text-2xl">✔</span>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">
+            Clubhouse, Party Lawn, Children's Play Area & more:
+          </h3>
+          <p class="text-gray-600">
+            Create lasting memories with your loved ones.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="flex items-start gap-4">
+        <div class="w-16 h-16 flex items-center justify-center border-4 border-green-500 rounded-full">
+          <span class="text-green-700 text-2xl">✔</span>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">
+            Plot sizes starting from 1453 sq. ft.:
+          </h3>
+          <p class="text-gray-600">
+            Design your dream weekend retreat.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="flex items-start gap-4">
+        <div class="w-16 h-16 flex items-center justify-center border-4 border-green-500 rounded-full">
+          <span class="text-green-700 text-2xl">✔</span>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">
+            PMRDA approved, clear titles, peace of mind:
+          </h3>
+          <p class="text-gray-600">
+            Invest with confidence.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="flex items-start gap-4">
+        <div class="w-16 h-16 flex items-center justify-center border-4 border-green-500 rounded-full">
+          <span class="text-green-700 text-2xl">✔</span>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">
+            Weekend getaways & adventures nearby (Lonavala, Kamshet etc.):
+          </h3>
+          <p class="text-gray-600">
+            Make the most of your leisure time.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="flex items-start gap-4">
+        <div class="w-16 h-16 flex items-center justify-center border-4 border-green-500 rounded-full">
+          <span class="text-green-700 text-2xl">✔</span>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">
+            Possession in 6 months:
+          </h3>
+          <p class="text-gray-600">
+            Build your dream soon!
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
             <!-- Locations Section -->
             <div class="py-24 bg-white">
@@ -337,6 +434,7 @@
                 </div>
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
                     <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&q=80" alt="Green valley" class="rounded-2xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+               
                     <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?w=600&q=80" alt="Farmland" class="rounded-2xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                     <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600&q=80" alt="Hills" class="rounded-2xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                     <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80" alt="Office" class="rounded-2xl shadow-lg w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
@@ -399,13 +497,26 @@
                             </div>
                             <div class="p-8 rounded-b-xl shadow-2xl border-t-0 bg-white border border-stone-200">
                                 <h3 class="text-xl font-serif font-bold mb-6 text-center text-navy-950">Interested in this property?</h3>
-                                <form onsubmit="handleFormSubmit(event, this)" class="space-y-4">
-                                    <input required type="text" class="w-full px-4 py-3 rounded-lg border bg-stone-50 border-stone-200 focus:border-navy-600 outline-none transition" placeholder="Full Name">
-                                    <input required type="tel" class="w-full px-4 py-3 rounded-lg border bg-stone-50 border-stone-200 focus:border-navy-600 outline-none transition" placeholder="Phone Number">
-                                    <button type="submit" class="w-full bg-amber-500 text-navy-950 font-bold py-4 rounded-lg hover:bg-amber-400 transition shadow-lg mt-2 text-lg">
-                                        Request Details
-                                    </button>
-                                </form>
+                            <form class="space-y-4 project-form">
+
+    <input required type="text" name="name"
+    class="w-full px-4 py-3 rounded-lg border bg-stone-50 border-stone-200"
+    placeholder="Full Name">
+
+    <input required type="tel" name="phone"
+    pattern="[0-9]{10}"
+    maxlength="10"
+    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+    class="w-full px-4 py-3 rounded-lg border bg-stone-50 border-stone-200"
+    placeholder="Phone Number">
+   
+
+    <button type="submit"
+    class="w-full bg-amber-500 text-navy-950 font-bold py-4 rounded-lg hover:bg-amber-400 transition shadow-lg mt-2 text-lg">
+        Request Details
+    </button>
+
+</form>
                                 <div class="form-success hidden text-center py-6">
                                     <i data-lucide="check-circle-2" class="w-12 h-12 text-navy-500 mx-auto mb-2"></i>
                                     <p class="font-semibold text-navy-950">Request Sent!</p>
@@ -459,92 +570,60 @@
 
                     <!-- Contact Form -->
                     <div class="p-12 relative">
-                        <h3 class="text-2xl font-bold text-navy-950 mb-6">Send a Message</h3>
-                        <form onsubmit="handleFormSubmit(event, this)" class="space-y-6">
-                            <div>
-                                <label class="block text-sm font-medium text-stone-600 mb-2">Name</label>
-                                <input required type="text" class="w-full px-4 py-3 rounded-lg border border-stone-200 focus:border-navy-600 focus:ring-1 focus:ring-navy-600 outline-none transition bg-stone-50">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-stone-600 mb-2">Phone / WhatsApp</label>
-                                <input required type="tel" class="w-full px-4 py-3 rounded-lg border border-stone-200 focus:border-navy-600 focus:ring-1 focus:ring-navy-600 outline-none transition bg-stone-50">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-stone-600 mb-2">Message</label>
-                                <textarea required rows="4" class="w-full px-4 py-3 rounded-lg border border-stone-200 focus:border-navy-600 focus:ring-1 focus:ring-navy-600 outline-none transition bg-stone-50"></textarea>
-                            </div>
-                            <button type="submit" class="bg-amber-500 text-navy-950 font-bold py-4 px-8 rounded-lg hover:bg-amber-400 transition shadow-lg w-full">
-                                Submit Inquiry
-                            </button>
-                        </form>
-                        <div class="form-success hidden absolute inset-0 bg-white flex flex-col items-center justify-center p-12 text-center z-10">
-                            <i data-lucide="check-circle-2" class="w-20 h-20 text-navy-500 mb-4"></i>
-                            <h3 class="text-2xl font-bold text-navy-950 mb-2">Message Sent Successfully!</h3>
-                            <p class="text-stone-600">We will get back to you shortly.</p>
-                            <button onclick="this.parentElement.classList.add('hidden'); this.parentElement.previousElementSibling.reset();" class="mt-6 text-amber-600 font-semibold underline">Send another message</button>
-                        </div>
+    <h3 class="text-2xl font-bold text-navy-950 mb-6">Send a Message</h3>
+
+    <!-- ✅ FORM -->
+    <form id="contact-form" class="space-y-6">
+
+        <!-- Name -->
+        <div>
+            <label class="block text-sm font-medium text-stone-600 mb-2">Name</label>
+            <input required type="text" name="name"
+            class="w-full px-4 py-3 rounded-lg border border-stone-200 bg-stone-50">
+        </div>
+
+        <!-- Phone -->
+        <div>
+            <label class="block text-sm font-medium text-stone-600 mb-2">Phone / WhatsApp</label>
+            <input required type="tel" name="phone"
+            pattern="[0-9]{10}"
+            maxlength="10"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+            placeholder="Enter 10 digit number"
+            class="w-full px-4 py-3 rounded-lg border border-stone-200 bg-stone-50">
+        </div>
+
+        <!-- Message -->
+        <div>
+            <label class="block text-sm font-medium text-stone-600 mb-2">Message</label>
+            <textarea required name="message" rows="4"
+            class="w-full px-4 py-3 rounded-lg border border-stone-200 bg-stone-50"></textarea>
+        </div>
+
+        <!-- Button -->
+        <button type="submit"
+        class="bg-amber-500 text-navy-950 font-bold py-4 px-8 rounded-lg hover:bg-amber-400 transition shadow-lg w-full">
+            Submit Inquiry
+        </button>
+
+    </form>
+
+    <!-- ✅ SUCCESS POPUP -->
+    <div class="form-success hidden absolute inset-0 bg-white flex flex-col items-center justify-center p-12 text-center z-10">
+        <i data-lucide="check-circle-2" class="w-20 h-20 text-navy-500 mb-4"></i>
+        <h3 class="text-2xl font-bold text-navy-950 mb-2">Message Sent Successfully!</h3>
+        <p class="text-stone-600">We will get back to you shortly.</p>
+        <button onclick="this.parentElement.classList.add('hidden'); this.parentElement.previousElementSibling.reset();" 
+        class="mt-6 text-amber-600 font-semibold underline">
+            Send another message
+        </button>
+    </div>
+</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ================= LANDING PAGE (AD FUNNEL) ================= -->
-        <section id="page-landing" class="page-section bg-stone-50 min-h-screen pt-4">
-            <div class="relative pt-12 pb-24 lg:pt-20 lg:pb-32 overflow-hidden">
-                <div class="container mx-auto px-4">
-                    <div class="grid lg:grid-cols-2 gap-12 items-center">
-                        <div>
-                            <div class="inline-block bg-amber-100 text-amber-700 font-bold px-4 py-1 rounded-full text-sm mb-6 border border-amber-200">
-                                Limited Plots Available in Urse
-                            </div>
-                            <h1 class="text-5xl lg:text-6xl font-serif font-bold text-navy-950 leading-tight mb-6">
-                                Your Dream Farmhouse Plot Awaits at <span class="text-navy-700">Green Valley Urse</span>
-                            </h1>
-                            <p class="text-xl text-stone-600 mb-8 leading-relaxed">
-                                Invest in premium NA plots near the Mumbai-Pune Expressway. Secure high returns and build your weekend retreat in nature's lap.
-                            </p>
-                            <div class="space-y-4 mb-8">
-                                <div class="flex items-center text-lg text-navy-900 font-medium">
-                                    <i data-lucide="check-circle-2" class="w-6 h-6 text-amber-500 mr-3 shrink-0"></i> Clear Title & PMRDA Approved
-                                </div>
-                                <div class="flex items-center text-lg text-navy-900 font-medium">
-                                    <i data-lucide="check-circle-2" class="w-6 h-6 text-amber-500 mr-3 shrink-0"></i> Internal Tar Roads & Infrastructure
-                                </div>
-                                <div class="flex items-center text-lg text-navy-900 font-medium">
-                                    <i data-lucide="check-circle-2" class="w-6 h-6 text-amber-500 mr-3 shrink-0"></i> 24/7 Security & Gated Community
-                                </div>
-                            </div>
-                            <p class="text-3xl font-bold text-navy-950">Starting at <span class="text-amber-500">₹25 Lacs</span></p>
-                        </div>
-                        <div class="relative">
-                            <div class="absolute inset-0 bg-navy-900 transform translate-x-4 translate-y-4 rounded-2xl"></div>
-                            <div class="relative bg-white p-8 rounded-2xl shadow-xl border border-stone-100">
-                                <div class="text-center mb-6">
-                                    <h3 class="text-2xl font-bold text-navy-950 mb-2">Book a Free Site Visit Today!</h3>
-                                    <p class="text-stone-500 text-sm">Fill the form below and avail exclusive pre-launch offers.</p>
-                                </div>
-                                <form onsubmit="handleFormSubmit(event, this)" class="space-y-5">
-                                    <input required type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg border border-stone-200 bg-stone-50 focus:border-amber-500 outline-none">
-                                    <input required type="tel" placeholder="Phone Number" class="w-full px-4 py-3 rounded-lg border border-stone-200 bg-stone-50 focus:border-amber-500 outline-none">
-                                    <input required type="email" placeholder="Email Address" class="w-full px-4 py-3 rounded-lg border border-stone-200 bg-stone-50 focus:border-amber-500 outline-none">
-                                    <button type="submit" class="w-full bg-amber-500 text-navy-950 font-bold py-4 rounded-lg hover:bg-amber-400 transition shadow-lg text-lg animate-pulse">
-                                        Claim Offer & Request Call
-                                    </button>
-                                </form>
-                                <div class="form-success hidden text-center py-8 absolute inset-0 bg-white rounded-2xl flex flex-col justify-center items-center">
-                                    <i data-lucide="check-circle-2" class="w-16 h-16 text-navy-500 mb-4"></i>
-                                    <p class="text-2xl font-bold text-navy-950">Offer Claimed!</p>
-                                    <p class="text-stone-600 mt-2">We will call you in 5 minutes.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <footer class="bg-navy-950 py-8 text-center text-stone-400 text-sm">
-                &copy; <span id="year-landing"></span> Sanskar Realty. All rights reserved.
-            </footer>
-        </section>
 
     </main>
 
@@ -586,7 +665,7 @@
                 </div>
             </div>
             <div class="border-t border-navy-900 pt-8 text-center text-stone-500 text-sm flex flex-col md:flex-row justify-between items-center">
-                <p>&copy; <span id="year-main"></span> Sanskar Realty. All rights reserved.</p>
+                <p>&copy; <span id="year-main"></span>  A2 Engineered. All rights reserved.</p>
                 <div class="space-x-4 mt-4 md:mt-0">
                     <a href="#" class="hover:text-amber-500 transition">Privacy Policy</a>
                     <a href="#" class="hover:text-amber-500 transition">Terms of Service</a>
